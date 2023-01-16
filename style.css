@@ -1,0 +1,101 @@
+/* Stile del font, background-image, background-size e colore base del testo */
+body{
+    font-family: sans-serif;
+    background-image: url(background.jpg);
+    background-size: 100%;
+    color: white;
+}
+
+/* Grandezza blocco nero (1200px*875px) con alpha impostata a 0.45, raggio di 15px e margin: auto */
+#container{
+    height: 875px;
+    width: 1200px;
+    margin: auto;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* Grandezza del Main (1000px*875px), margin: auto */
+#container2{
+    height: 875px;
+    width: 1000px;
+    margin: auto;
+}
+
+/* Altezza di header (33% di container), colore del testo e centratura del testo */
+header{
+    text-align: center;
+    color: lime;
+    height: 33%;
+}
+
+/* Ridimensionamento del logo usando height: 40% (di header), creazione di un margine */
+header > img{
+    margin-top: 10%;
+    height: 40%;
+}
+
+/* Posizionamento del testo riducendo il margin-top a 5px */
+header > h1{
+    margin-top: 5px;
+}
+
+/* Dimensionamento del nav e aggiunta di colore */
+nav{
+    height: 5%;
+    text-align: center;
+    background-color: lime;
+    margin-bottom: 1%;
+}
+
+/* Assegnazione della stessa altezza al div di nav */
+nav>div{
+    height: 100%;
+}
+
+/* Centratura dei bottoni all'interno del div */
+div > button{
+    margin-top: 1%;
+}
+
+/* Metodo di visualizzazione cambiato in block per tutti gli elementi della classe scooter */
+.scooter > *{
+    display: block;
+}
+
+/* Metodo di visualizzazione cambiato per gli oggetti aventi sia classe scooter che name in inline-block e creazione di un margine di 10px */
+.scooter.name > *{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Aggiunta tramite pseudo-elemento e l'uso di :before e content della freccetta */
+.scooter.location > span:before{
+    content:"\21A6"
+}
+
+/* Classe charge, ovvero la classe base dalla quale le classi "high", "medium" e "low" ereditano margine, altezza, raggio del bordo e colore di base  */
+.charge{
+    margin-top: 5px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+/* Cambio della lunghezza ereditata da charge e del colore */
+.charge.high{
+    width: 65%;
+    background-color: rgb(38, 201, 38);
+}
+
+/* Cambio della lunghezza ereditata da charge e del colore */
+.charge.medium{
+    width: 35%;
+    background-color: rgb(247, 168, 23);
+}
+
+/* Cambio della lunghezza ereditata da charge e del colore */
+.charge.low{
+    width: 15%;
+    background-color: rgb(197, 0, 0);
+}
